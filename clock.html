@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-wrapper">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Clock Toggle -->
+    <button id="toggleClock" class="theme-toggle">🕒 Show Time</button>
+
+    <!-- Clock Display -->
+    <div id="clock" class="clock" style="display: none;">12:00:00</div>
+
+    <!-- Stopwatch Display -->
+    <div class="timer-display" id="display">00:00.00</div>
+
+    <!-- Stopwatch Controls -->
+    <div class="buttons">
+      <button id="lapBtn" disabled>Lap</button>
+      <button id="startStopBtn" class="start">Start</button>
+    </div>
+
+    <!-- Lap List -->
+    <ul id="laps" class="laps-list"></ul>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="resetConfirm" class="modal">
+      <div class="modal-content">
+        <p>Reset stopwatch?</p>
+        <button id="confirmReset">Yes</button>
+        <button id="cancelReset">No</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
